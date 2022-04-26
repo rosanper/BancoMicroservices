@@ -23,11 +23,11 @@ Foram desenvolvidos dois micro serviços, um para cadastro de usuário e outro p
 O usuariomicroservice é responsável por cadastrar o usuário e todas as operações de CRUD dele. Para criar um novo usuário é necessário passar o nome, o cpf e a senha, 
 e antes da criação é verificado no banco se já existe algum cadastro com o cpf passado.
 
-O contamicroservice é responsável por criar uma conta. Para a criação da conta é ncessário passar a agencia, o saldo, o tipoConta (que é um ENUM com as opções: 
+O contamicroservice é responsável por criar uma conta. Para a criação da conta é necessário passar a agencia, o saldo, o tipoConta (que é um ENUM com as opções: 
 CONTA_POUPANCA e CONTA_CORRENTE), o nome da pessoa atrelado a conta e seu cpf. É feito uma consulta no usuariomicroservice para obter os dados dessa pessoa,
 e caso ela não seja cadastrada é feito esse cadastro.
 
-O usuaio usuariomicroservice está rodando na porta 8080, enquanto o contamicroservice está rodando na porta 8081.
+O usuariomicroservice está rodando na porta 8080, enquanto o contamicroservice está rodando na porta 8081.
 
 OBS: Foi feito a tentativa de utilização do PostgreSQL no projeto de usuário, porém este apresentou problema que não foi possível solucionar antes da data atual. 
 Por esse motivo foi utilizado em ambos o banco H2.
